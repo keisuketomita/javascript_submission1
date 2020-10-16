@@ -4,8 +4,10 @@
 $(document).ready(function(){
   $('.point').on('mouseup keyup', function(e){
     let point = parseInt($(this).val());
-    let pointMax = parseInt($(this).attr('max'));
-    let pointMin = parseInt($(this).attr('min'));
+    const pointMin = 0;
+    const pointMax = 100;
+    // let pointMax = parseInt($(this).attr('max'));
+    // let pointMin = parseInt($(this).attr('min'));
     if(point > pointMax){ $(this).val(pointMax); }
     if(point < pointMin){ $(this).val(pointMin); }
     if(isNaN(point)){ $(this).val(''); }
